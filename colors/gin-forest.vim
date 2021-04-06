@@ -4,7 +4,7 @@
 "
 " -------------------------------------------------------------------
 " 设置可视模式的颜色
-hi Visual guifg=#ffffff guibg=#7c8ea6
+hi Visual gui=bold guifg=#ffffff guibg=#7c8ea6
 " 设置注释的颜色
 hi Comment guifg=#524e4d
 " 修改字符串的颜色
@@ -24,14 +24,14 @@ hi LineNr guifg=#def0f2
 " 修改当前行号的颜色
 hi CursorLineNr guifg=#a3ce7e
 " 修改匹配括号的颜色
-hi MatchParen guifg=#436378 guibg=#6bbc79
+hi MatchParen gui=bold guifg=#436378 guibg=#6bbc79
 " 修改窗口边框的颜色
 hi VertSplit guifg=#303030 guibg=#444444
 " 修改光标所在行的颜色
-hi CursorLine guifg=#ffffff guibg=#5976ae
+hi CursorLine gui=bold guifg=#ffffff guibg=#5976ae
 " 设置自动补全窗口的颜色
-hi Pmenu guifg=#e6e6fa guibg=#537591
-hi PmenuSel guifg=#537591 guibg=#b0dbd4
+hi Pmenu gui=bold guifg=#e6e6fa guibg=#537591
+hi PmenuSel gui=bold guifg=#537591 guibg=#b0dbd4
 hi PmenuSbar guifg=#6683af guibg=#6683af
 " some
 hi Title guifg=#bba0cb

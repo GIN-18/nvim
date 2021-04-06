@@ -96,9 +96,10 @@ noremap <M-J> <C-w>j
 noremap <M-K> <C-w>k
 noremap <M-L> <C-w>l
 noremap <M-p> "+p
-noremap <M-g> :new<CR>:term lazygit<CR>i
 noremap <M-t> :new<CR>:term<CR>i
-noremap <LEADER>nh :nohlsearch<CR>
+noremap <M-g> :new<CR>:term lazygit<CR>i
+noremap <M-R> :new<CR>:term node $(fzf)<CR>i
+noremap <LEADER>nh :nohlsearch<CR>i
 noremap <LEADER>co :!chromium %&<CR><CR>
 noremap <LEADER>ch o<!----><Esc>F-;i
 noremap <LEADER>cc o/**/<Esc>F*i
@@ -167,9 +168,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim', { 'on': ['Files', 'History', 'Marks', 'Buffers', 'Rg']}
 
-" vista.vim
+" vista
 Plug 'liuchengxu/vista.vim', { 'on': ['Vista!!', 'Vista finder']}
 
 " rnvimr
@@ -200,73 +201,6 @@ call plug#end()
 " pluginSetting
 "
 " -------------------------------------------------------------------
-" coc.nvim
-" -------------------------------------------------------------------
-" 自动加载coc插件
-let g:coc_global_extensions = [
-		\ 'coc-git',
-		\ 'coc-html',
-		\ 'coc-css',
-		\ 'coc-tsserver',
-		\ 'coc-vetur',
-		\ 'coc-xml',
-	 	\ 'coc-yaml',
-		\ 'coc-json',
-		\ 'coc-emmet',
-		\ 'coc-eslint',
-		\ 'coc-vimlsp',
-		\ 'coc-snippets',
-		\ 'coc-highlight',
-		\ 'coc-prettier']
-
-set updatetime=160
-set shortmess+=c
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
-endfunction
-
-if has("patch-8.1.1564")
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
-" GoTo code navigation.
-" 跳转到函数所在的位置
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
-nmap <silent> <LEADER>gd <Plug>(coc-definition)
-
-" 跳转到代码有误的地方
-nmap <silent> <LEADER>gr <Plug>(coc-diagnostic-prev)
-
-" Use <LEADER>k to show documentation in preview window.
-nnoremap <silent> <LEADER>k :call <SID>show_documentation()<CR>
-
 " dict
 " -------------------------------------------------------------------
 " 翻译光标下的单词并在dict窗口显示
@@ -282,6 +216,7 @@ noremap <M-w> :DictW
 " -------------------------------------------------------------------
 noremap <M-e> :NERDTreeToggle<CR>
 
+let NERDTreeQuitOnOpen = 1
 let NERDTreeStatusline = -1
 let NERDTreeMinimalUI = 1
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
@@ -293,47 +228,6 @@ nnoremap <silent> <M-r> :RnvimrToggle<CR>
 
 " Make Ranger to be hidden after picking a file
 let g:rnvimr_enable_picker = 1
-
-" fzf
-" -------------------------------------------------------------------
-" 搜索文件
-noremap <silent> <M-f> :Files<CR>
-" 搜索标记
-noremap <silent> <M-m> :Marks<CR>
-" 搜索历史文件
-noremap <silent> <M-h> :History<CR>
-" 搜索Buffers
-noremap <silent> <M-b> :Buffers<CR>
-" 搜索历史命令
-noremap <silent> <M-c> :History:<CR>
-
-" Default fzf layout
-" - Popup window
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
-" - down / up / left / right
-let g:fzf_layout = { 'down': '40%' }
-
-let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
-
-function! s:list_buffers()
-  redir => list
-  silent ls
-  redir END
-  return split(list, "\n")
-endfunction
-
-function! s:delete_buffers(lines)
-  execute 'bwipeout' join(map(a:lines, {_, line -> split(line)[0]}))
-endfunction
-
-" Override statusline as you like
-function! s:fzf_statusline()
-  highlight fzf1 gui=bold guifg=#d7005f guibg=#c6c6c6
-  highlight fzf2 gui=bold guifg=#005f5f guibg=#c6c6c6
-  setlocal statusline=%#fzf1#\ >\ %#fzf2#fzf
-endfunction
-
-autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
 " vim-table-mode
 " -------------------------------------------------------------------
