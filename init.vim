@@ -149,6 +149,7 @@ tnoremap <M-q> <C-d>
 " -------------------------------------------------------------------
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
+autocmd FileType md source ~/.config/nvim/plugin/markdown-snippets.vim
 
 " -------------------------------------------------------------------
 "
