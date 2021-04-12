@@ -171,9 +171,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'History', 'Marks', 'Buffers', 'Rg']}
 
-" vista
-Plug 'liuchengxu/vista.vim', { 'on': ['Vista!!', 'Vista finder']}
-
 " rnvimr
 Plug 'kevinhwang91/rnvimr', { 'on': 'RnvimrToggle' }
 
@@ -185,6 +182,10 @@ Plug 'iamcco/dict.vim', { 'on': ['DictW', '<Plug>DictWSearch', '<Plug>DictWVSear
                                                                                       
 " nerdtree
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" vista
+" Plug 'liuchengxu/vista.vim', { 'on': ['Vista!!', 'Vista finder!']}
+" Plug 'liuchengxu/vista.vim'
 
 " vim-terminal-help
 " Plug 'skywind3000/vim-terminal-help'
