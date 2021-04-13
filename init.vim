@@ -101,7 +101,7 @@ noremap <M-g> :new<CR>:term lazygit<CR>i
 noremap <M-R> :new<CR>:term node $(fzf)<CR>i
 noremap <LEADER>nh :nohlsearch<CR>i
 noremap <LEADER>co :!chromium %&<CR><CR>
-noremap <LEADER>ch o<!----><Esc>F-;i
+noremap <LEADER>ch o<!--  --><Esc>F-;hi
 noremap <LEADER>cc o/**/<Esc>F*i
 noremap <LEADER>cj o/*<CR>*/<Esc>O<Tab>
 " 打开一个新的标签页
@@ -183,9 +183,11 @@ Plug 'iamcco/dict.vim', { 'on': ['DictW', '<Plug>DictWSearch', '<Plug>DictWVSear
 " nerdtree
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 
+" vim-devicons
+Plug 'ryanoasis/vim-devicons'
+
 " vista
-" Plug 'liuchengxu/vista.vim', { 'on': ['Vista!!', 'Vista finder!']}
-" Plug 'liuchengxu/vista.vim'
+Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 
 " vim-terminal-help
 " Plug 'skywind3000/vim-terminal-help'
@@ -251,7 +253,7 @@ inoreabbrev <expr> __
 
 " markdown-preview.nvim
 " -------------------------------------------------------------------
-nnoremap <silent> <M-M> :MarkdownPreview<CR>
+nnoremap <silent> <M-m> :MarkdownPreview<CR>
 
 " 自动启动(默认为0，改为1为开启自动启动)
 let g:mkdp_auto_start = 0

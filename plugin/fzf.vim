@@ -2,20 +2,20 @@
 " -------------------------------------------------------------------
 " 搜索文件
 noremap <silent> <M-f> :Files<CR>
-" 搜索标记
-noremap <silent> <M-m> :Marks<CR>
 " 搜索历史文件
 noremap <silent> <M-h> :History<CR>
 " 搜索Buffers
 noremap <silent> <M-b> :Buffers<CR>
+" 搜索历史命令
+noremap <silent> <M-M> :History:<CR>
+" 搜索标记
+" noremap <silent> <M-m> :Marks<CR>
 " 搜索单词
 " noremap <silent> <M-R> :Rg<CR>
-" 搜索历史命令
-" noremap <silent> <M-c> :History:<CR>
 
 " Default fzf layout
 " - Popup window
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+" let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
 " - down / up / left / right
 let g:fzf_layout = { 'down': '50%' }
 
