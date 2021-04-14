@@ -57,6 +57,8 @@ set cursorline
 set splitbelow
 " 启用gui配色
 set termguicolors
+" 空格替换制表
+set expandtab
 " 设置颜色主题
 colorscheme gin-forest
 " 解决不同终端下vim的配色问题
@@ -99,7 +101,7 @@ noremap <M-p> "+p
 noremap <M-t> :new<CR>:term<CR>i
 noremap <M-g> :new<CR>:term lazygit<CR>i
 noremap <M-R> :new<CR>:term node $(fzf)<CR>i
-noremap <LEADER>nh :nohlsearch<CR>i
+noremap <LEADER>nh :nohlsearch<CR>
 noremap <LEADER>co :!chromium %&<CR><CR>
 noremap <LEADER>ch o<!--  --><Esc>F-;hi
 noremap <LEADER>cc o/**/<Esc>F*i
@@ -189,6 +191,9 @@ Plug 'ryanoasis/vim-devicons'
 " vista
 Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 
+" bracey.vim
+Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server', 'on': 'Bracey' }
+
 " vim-terminal-help
 " Plug 'skywind3000/vim-terminal-help'
 
@@ -225,6 +230,12 @@ let NERDTreeStatusline = -1
 let NERDTreeMinimalUI = 1
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
     \ quit | endif
+
+" bracey
+" -------------------------------------------------------------------
+nnoremap <silent> <M-i> :Bracey<CR><CR>
+
+let g:bracey_refresh_on_save = 1
 
 " rnvimr
 " -------------------------------------------------------------------

@@ -17,6 +17,8 @@
  autocmd Filetype markdown inoremap ,i **<++><Esc>F*hi
 " "粗体文本
  autocmd Filetype markdown inoremap ,s ****<++><Esc>F*hi
+" "标注
+ autocmd Filetype markdown inoremap ,m ``<++><Esc>F`i
 " "粗斜体文本
 " autocmd Filetype markdown inoremap ,si ******<++><Esc>F*hi
 " "下划线
