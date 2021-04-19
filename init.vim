@@ -189,6 +189,8 @@ Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 " bracey.vim
 Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server', 'on': 'Bracey' }
 
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+
 " fzf.vim
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim', { 'on': ['Files', 'History', 'Marks', 'Buffers', 'Rg']}
@@ -219,6 +221,15 @@ nmap <silent> <LEADER>r <Plug>DictRSearch
 vmap <silent> <LEADER>r <Plug>DictRVSearch
 " 输入需要翻译的单词
 noremap <M-w> :DictW 
+
+" leaderf
+" -------------------------------------------------------------------
+nnoremap <silent> <M-f> :LeaderfFile<CR>
+nnoremap <silent> <M-b> :LeaderfBuffer<CR>
+nnoremap <silent> <M-h> :LeaderfMru<CR>
+
+let g:Lf_DisableStl = 1
+let g:Lf_WindowHeight = 0.4
 
 " nerdtree
 " -------------------------------------------------------------------
