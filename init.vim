@@ -100,7 +100,6 @@ noremap <M-L> <C-w>l
 noremap <M-p> "+p
 noremap <M-t> :new<CR>:term<CR>i
 noremap <M-g> :new<CR>:term lazygit<CR>i
-noremap <M-R> :new<CR>:term node $(fzf)<CR>i
 noremap <LEADER>nh :nohlsearch<CR>
 noremap <LEADER>co :!chromium %&<CR><CR>
 noremap <LEADER>ch o<!--  --><Esc>F-;hi
@@ -169,10 +168,6 @@ Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['markdown'
 " coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" fzf.vim
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim', { 'on': ['Files', 'History', 'Marks', 'Buffers', 'Rg']}
-
 " rnvimr
 Plug 'kevinhwang91/rnvimr', { 'on': 'RnvimrToggle' }
 
@@ -193,6 +188,10 @@ Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 
 " bracey.vim
 Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server', 'on': 'Bracey' }
+
+" fzf.vim
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim', { 'on': ['Files', 'History', 'Marks', 'Buffers', 'Rg']}
 
 " vim-terminal-help
 " Plug 'skywind3000/vim-terminal-help'
