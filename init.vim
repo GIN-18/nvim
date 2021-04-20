@@ -84,9 +84,9 @@ autocmd InsertEnter * if exists('b:fcitx') && b:fcitx == 2 | call system(s:fcitx
 " -------------------------------------------------------------------
 " noremap
 " -------------------------------------------------------------------
-noremap Q :q<CR>
-noremap s :w<CR>
-noremap S :wq<CR>
+noremap <silent> Q :q<CR>
+noremap <silent> s :w<CR>
+noremap <silent> S :wq<CR>
 noremap K 5k
 noremap J 5j
 noremap H 0
@@ -189,11 +189,12 @@ Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 " bracey.vim
 Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server', 'on': 'Bracey' }
 
-Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-
 " fzf.vim
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim', { 'on': ['Files', 'History', 'Marks', 'Buffers', 'Rg']}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" leaderf
+" Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 " vim-terminal-help
 " Plug 'skywind3000/vim-terminal-help'
@@ -211,36 +212,6 @@ call plug#end()
 " pluginSetting
 "
 " -------------------------------------------------------------------
-" dict
-" -------------------------------------------------------------------
-" 翻译光标下的单词并在dict窗口显示
-nmap <silent> <LEADER>t <Plug>DictWSearch
-vmap <silent> <LEADER>t <Plug>DictWVSearch
-" 翻译光标下的单词并替换翻译结果
-nmap <silent> <LEADER>r <Plug>DictRSearch
-vmap <silent> <LEADER>r <Plug>DictRVSearch
-" 输入需要翻译的单词
-noremap <M-w> :DictW 
-
-" leaderf
-" -------------------------------------------------------------------
-nnoremap <silent> <M-f> :LeaderfFile<CR>
-nnoremap <silent> <M-b> :LeaderfBuffer<CR>
-nnoremap <silent> <M-h> :LeaderfMru<CR>
-
-let g:Lf_DisableStl = 1
-let g:Lf_WindowHeight = 0.4
-
-" nerdtree
-" -------------------------------------------------------------------
-noremap <M-e> :NERDTreeToggle<CR>
-
-let NERDTreeQuitOnOpen = 1
-let NERDTreeStatusline = -1
-let NERDTreeMinimalUI = 1
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
-
 " bracey
 " -------------------------------------------------------------------
 nnoremap <silent> <M-i> :Bracey<CR><CR>
@@ -253,35 +224,6 @@ nnoremap <silent> <M-r> :RnvimrToggle<CR>
 
 " Make Ranger to be hidden after picking a file
 let g:rnvimr_enable_picker = 1
-
-" vim-table-mode
-" -------------------------------------------------------------------
-noremap <silent> <M-T> :TableModeToggle<CR>
-
-function! s:isAtStartOfLine(mapping)
-  let text_before_cursor = getline('.')[0 : col('.')-1]
-  let mapping_pattern = '\V' . escape(a:mapping, '\')
-  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
-  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
-endfunction
-
-inoreabbrev <expr> <bar><bar>
-          \ <SID>isAtStartOfLine('\|\|') ?
-          \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
-inoreabbrev <expr> __
-          \ <SID>isAtStartOfLine('__') ?
-          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
-
-" markdown-preview.nvim
-" -------------------------------------------------------------------
-nnoremap <silent> <M-m> :MarkdownPreview<CR>
-
-" 自动启动(默认为0，改为1为开启自动启动)
-let g:mkdp_auto_start = 0
-" 自动刷新(默认为0,改为1为开启自动刷新)
-let g:mkdp_refresh_slow = 1
-" 设置的预览浏览器
-let g:mkdp_browser = 'chromium'
 
 " 找到当前光标下的字符属于那个highlight-group
 " -------------------------------------------------------------------
