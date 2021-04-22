@@ -193,6 +193,9 @@ Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server', 'on': 'Bracey' 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" calendar.vim
+Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
+
 " leaderf
 " Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
