@@ -103,7 +103,7 @@ noremap <M-g> :new<CR>:term lazygit<CR>i
 noremap <LEADER>nh :nohlsearch<CR>
 noremap <LEADER>co :!chromium %&<CR><CR>
 noremap <LEADER>ch o<!--  --><Esc>F-;hi
-noremap <LEADER>cc o/**/<Esc>F*i
+noremap <LEADER>cc o/*  */<Esc>F*hi
 noremap <LEADER>cj o/*<CR>*/<Esc>O<Tab>
 " 打开一个新的标签页
 noremap <LEADER>nt :tabe<CR>

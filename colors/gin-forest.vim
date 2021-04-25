@@ -6,7 +6,7 @@
 " 设置可视模式的颜色
 hi Visual gui=bold guifg=#ffffff guibg=#7c8ea6
 " 设置注释的颜色
-hi Comment guifg=#524e4d
+hi Comment guifg=#4C566A
 " 修改字符串的颜色
 hi Sting guifg=#d7d7ff
 " 修改类型的颜色

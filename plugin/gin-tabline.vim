@@ -1,8 +1,8 @@
 " tabline
 " -------------------------------------------------------------------
 " 定义颜色
-hi TabLine gui=bold guifg=#afafff guibg=#4e4e4e
-hi TabLineSel gui=bold guifg=#ffffff guibg=#3a3a3a
+hi TabLine gui=bold guifg=#ffffff guibg=#4e4e4e
+hi TabLineSel gui=bold guifg=#95ceab guibg=#3a3a3a
 hi TabLineFill gui=bold guifg=#ffafaf guibg=#4e4e4e
 
 set tabline=%!MyTabLine()
