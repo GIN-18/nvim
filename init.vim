@@ -196,6 +196,9 @@ Plug 'junegunn/fzf.vim'
 " calendar.vim
 Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
 
+" md-img-paste
+Plug 'ferrine/md-img-paste.vim', { 'for': ['markdown', 'vim-plug'] }
+
 " leaderf
 " Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
@@ -227,6 +230,13 @@ nnoremap <silent> <M-r> :RnvimrToggle<CR>
 
 " Make Ranger to be hidden after picking a file
 let g:rnvimr_enable_picker = 1
+
+" md-img-paste
+" -------------------------------------------------------------------
+" let g:mdip_imgname = 'image'
+let g:mdip_imgdir = 'screenshot'
+autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
+
 
 " 找到当前光标下的字符属于那个highlight-group
 " -------------------------------------------------------------------

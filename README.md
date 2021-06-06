@@ -1,6 +1,6 @@
 ## 一个方便前端开发的neovim配置
 
-![neovim](./README.assets/neovim.png)
+![neovim](./screenshot/neovim.png)
 
 ## 依赖
 
@@ -82,7 +82,7 @@ pip install --user pynvim
 | `leader` `g` `r` | 跳转到代码报错的地方     |
 | `leader` `k`     | 显示当前光标下单词的文档 |
 
-![coc](./README.assets/coc.gif)
+![coc](./screenshot/coc.gif)
 
 ### bracey(自动刷新页面)
 
@@ -94,7 +94,7 @@ pip install --user pynvim
 |-----------|------------|
 | `alt` `i` | 启动bracey |
 
-![bracey](./README.assets/bracey.gif)
+![bracey](./screenshot/bracey.gif)
 
 ### fzf(模糊搜索)
 
@@ -110,7 +110,7 @@ pip install --user pynvim
 | `ctrl` `j` | 向下移动一格         |
 | `ctrl` `k` | 向上移动一格         |
 
-![fzf](./README.assets/fzf.gif)
+![fzf](./screenshot/fzf.gif)
 
 ### nerdtree(文件浏览)
 
@@ -128,7 +128,7 @@ pip install --user pynvim
 | `u`       | 返回上一级目录 |
 | `m`       | 打开菜单       |
 
-![nerdtree](./README.assets/nerdtree.png)
+![nerdtree](./screenshot/nerdtree.png)
 
 ### vista(tags工具)
 
@@ -143,9 +143,9 @@ pip install --user pynvim
 | `q`               | 退出vista     |
 | `p`               | 预览          |
 
-![vista](./README.assets/vista.png)
+![vista](./screenshot/vista.png)
 
-![vista-finder](./README.assets/vista-finder.png)
+![vista-finder](./screenshot/vista-finder.png)
 
 ### markdown-preview(markdown预览)
 
@@ -159,7 +159,7 @@ pip install --user pynvim
 
 使用`chromium`浏览器预览，可以在`plugin/markdown-preview.vim`中修改。
 
-![markdown-preview](./README.assets/markdown-preview.png)
+![markdown-preview](./screenshot/markdown-preview.png)
 
 ### vim-table-mode(表格模板)
 
@@ -171,7 +171,7 @@ pip install --user pynvim
 |-------------------|--------------------|
 | `alt` `shift` `t` | 打开vim-table-mode |
 
-![table-mode](./README.assets/table-mode.gif)
+![table-mode](./screenshot/table-mode.gif)
 
 ### dict(翻译)
 
@@ -185,4 +185,4 @@ pip install --user pynvim
 | `leader` `t` | 翻译当前光标下的单词   |
 | `leader` `r` | 翻译并替换光标下的单词 |
 
-![dict](./README.assets/dict.gif)
+![dict](./screenshot/dict.gif)
