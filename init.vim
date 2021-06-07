@@ -60,7 +60,7 @@ set termguicolors
 " 空格替换制表
 set expandtab
 " 设置颜色主题
-colorscheme gin-forest
+colorscheme gin-colorscheme
 " 解决不同终端下vim的配色问题
 let &t_ut=''
 " 设置leader键为空格键
@@ -150,6 +150,7 @@ tnoremap <M-q> <C-d>
 " -------------------------------------------------------------------
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
+autocmd FileType sh source ~/.config/nvim/plugin/sh-snippets.vim
 autocmd FileType md source ~/.config/nvim/plugin/markdown-snippets.vim
 
 " -------------------------------------------------------------------
@@ -193,11 +194,11 @@ Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server', 'on': 'Bracey' 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" calendar.vim
-Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
-
 " md-img-paste
 Plug 'ferrine/md-img-paste.vim', { 'for': ['markdown', 'vim-plug'] }
+
+" calendar.vim
+" Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
 
 " leaderf
 " Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
