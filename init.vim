@@ -141,7 +141,7 @@ vnoremap Y "+y
 
 " tnoremap
 " -------------------------------------------------------------------
-tnoremap <M-q> <C-d>
+" tnoremap <M-q> <C-d>
 
 " -------------------------------------------------------------------
 "
@@ -150,7 +150,6 @@ tnoremap <M-q> <C-d>
 " -------------------------------------------------------------------
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
-autocmd FileType sh source ~/.config/nvim/plugin/sh-snippets.vim
 autocmd FileType md source ~/.config/nvim/plugin/markdown-snippets.vim
 
 " -------------------------------------------------------------------
@@ -235,7 +234,7 @@ let g:rnvimr_enable_picker = 1
 " md-img-paste
 " -------------------------------------------------------------------
 " let g:mdip_imgname = 'image'
-let g:mdip_imgdir = 'screenshot'
+let g:mdip_imgdir = 'images'
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 
 

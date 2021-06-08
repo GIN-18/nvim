@@ -1,6 +1,7 @@
 " vim-table-mode
 " -------------------------------------------------------------------
 noremap <silent> <M-T> :TableModeToggle<CR>
+noremap <silent> <M-R> :TableModeRealign<CR>
 
 function! s:isAtStartOfLine(mapping)
   let text_before_cursor = getline('.')[0 : col('.')-1]
