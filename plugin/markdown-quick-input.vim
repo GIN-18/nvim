@@ -14,15 +14,15 @@
 " "六级标题
  autocmd Filetype markdown inoremap ,6 ######<Space><Enter><Enter><++><Esc>2kA
 " "斜体文本
- autocmd Filetype markdown inoremap ,i **<++><Esc>F*hi
+ autocmd Filetype markdown inoremap ,i **<++><Esc>F*i
 " "粗体文本
  autocmd Filetype markdown inoremap ,s ****<++><Esc>F*hi
 " "标注
  autocmd Filetype markdown inoremap ,m ``<++><Esc>F`i
 " "粗斜体文本
-" autocmd Filetype markdown inoremap ,si ******<++><Esc>F*hi
+ autocmd Filetype markdown inoremap ,e ******<++><Esc>F*hhi
 " "下划线
-" autocmd Filetype markdown inoremap ,st ~~~~<++><Esc>F~hi
+ autocmd Filetype markdown inoremap ,b ~~~~<++><Esc>F~hi
 " "高亮
  autocmd Filetype markdown inoremap ,h ====<++><Esc>F=hi
 " "插入图片
