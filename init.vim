@@ -1,3 +1,12 @@
+" ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗
+" ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║
+" ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║
+" ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║
+" ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║
+" ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝
+
+" @Author: gin
+
 " -------------------------------------------------------------------
 "
 " Auto load for first time uses
@@ -150,7 +159,7 @@ vnoremap Y "+y
 " -------------------------------------------------------------------
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
-autocmd FileType md source ~/.config/nvim/plugin/markdown-snippets.vim
+autocmd FileType md source ~/.config/nvim/plugin/markdown-quick-input.vim
 
 " -------------------------------------------------------------------
 "
