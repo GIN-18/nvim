@@ -36,6 +36,7 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
+set smartindent
 " 设置光标距离顶部和底部的固定位置
 set scrolloff=5
 " 设置编码格式为utf-8
@@ -205,6 +206,9 @@ Plug 'junegunn/fzf.vim'
 " md-img-paste
 Plug 'ferrine/md-img-paste.vim', { 'for': ['markdown', 'vim-plug'] }
 
+" indent-line
+" Plug 'glepnir/indent-guides.nvim'
+
 " calendar.vim
 " Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
 
@@ -229,7 +233,7 @@ call plug#end()
 " -------------------------------------------------------------------
 " bracey
 " -------------------------------------------------------------------
-nnoremap <silent> <M-i> :Bracey<CR><CR>
+" nnoremap <silent> <M-i> :Bracey<CR><CR>
 
 let g:bracey_refresh_on_save = 1
 

@@ -147,9 +147,9 @@ endsnippet
 
 插件地址：[bracey.vim](https://github.com/turbio/bracey.vim)
 
-| 快捷键    | 描述       |
-|-----------|------------|
-| `alt` `i` | 启动bracey |
+| 快捷键      | 描述       |
+|-------------|------------|
+| `shift` `r` | 启动bracey |
 
 ![bracey](./images/bracey.gif)
 
@@ -192,7 +192,7 @@ endsnippet
 
 | 快捷键    | 描述     |
 |-----------|----------|
-| `alt` `m` | 打开预览 |
+| `shift` `r` | 打开预览 |
 
 配置中使用`chromium`浏览器作为预览工具。
 
@@ -226,7 +226,7 @@ endsnippet
 | 快捷键       | 描述           |
 |--------------|----------------|
 | `leader` `p` | 输入图片的名称 |
----
+
 ![clip-img](./images/clip-img.gif)
 
 ## 5. 其他插件
