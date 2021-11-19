@@ -36,7 +36,8 @@ filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set smartindent
+" 设置自动缩进
+set autoindent
 " 设置光标距离顶部和底部的固定位置
 set scrolloff=5
 " 设置编码格式为utf-8
@@ -94,9 +95,9 @@ autocmd InsertEnter * if exists('b:fcitx') && b:fcitx == 2 | call system(s:fcitx
 " -------------------------------------------------------------------
 " noremap
 " -------------------------------------------------------------------
-noremap <silent> Q :q<CR>
-noremap <silent> s :w<CR>
-noremap <silent> S :wq<CR>
+noremap Q :q<CR>
+noremap s :w<CR>
+noremap S :wq<CR>
 noremap K 5k
 noremap J 5j
 noremap H 0
@@ -111,10 +112,6 @@ noremap <M-p> "+p
 noremap <M-t> :new<CR>:term<CR>i
 noremap <M-g> :new<CR>:term lazygit<CR>i
 noremap <LEADER>nh :nohlsearch<CR>
-noremap <LEADER>co :!chromium %&<CR><CR>
-noremap <LEADER>ch o<!--  --><Esc>F-;hi
-noremap <LEADER>cc o/*  */<Esc>F*hi
-noremap <LEADER>cj o/*<CR>*/<Esc>O<Tab>
 " 打开一个新的标签页
 noremap <LEADER>nt :tabe<CR>
 " 切换到下一个标签页
@@ -181,20 +178,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " rnvimr
 Plug 'kevinhwang91/rnvimr', { 'on': 'RnvimrToggle' }
 
-" vim-startify
-Plug 'mhinz/vim-startify'
-
 " translate
 Plug 'iamcco/dict.vim', { 'on': ['DictW', '<Plug>DictWSearch', '<Plug>DictWVSearch', '<Plug>DictRSearch', '<Plug>DictRVSearch']}
                                                                                       
-" nerdtree
-Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-
 " vim-devicons
 Plug 'ryanoasis/vim-devicons'
-
-" vista
-Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 
 " bracey.vim
 Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server', 'on': 'Bracey' }
@@ -205,6 +193,15 @@ Plug 'junegunn/fzf.vim'
 
 " md-img-paste
 Plug 'ferrine/md-img-paste.vim', { 'for': ['markdown', 'vim-plug'] }
+
+" nerdtree
+" Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" vista
+" Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
+
+" vim-startify
+" Plug 'mhinz/vim-startify'
 
 " indent-line
 " Plug 'glepnir/indent-guides.nvim'
@@ -233,8 +230,6 @@ call plug#end()
 " -------------------------------------------------------------------
 " bracey
 " -------------------------------------------------------------------
-" nnoremap <silent> <M-i> :Bracey<CR><CR>
-
 let g:bracey_refresh_on_save = 1
 
 " rnvimr

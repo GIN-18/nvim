@@ -3,17 +3,13 @@
 " 自动加载coc插件
 let g:coc_global_extensions = [
 		\ 'coc-git',
-		\ 'coc-sh',
 		\ 'coc-html',
 		\ 'coc-css',
 		\ 'coc-tsserver',
 		\ 'coc-vetur',
-		\ 'coc-xml',
-	 	\ 'coc-yaml',
 		\ 'coc-json',
 		\ 'coc-emmet',
 		\ 'coc-eslint',
-		\ 'coc-vimlsp',
 		\ 'coc-snippets',
 		\ 'coc-highlight',
 		\ 'coc-prettier']
