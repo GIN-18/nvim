@@ -32,7 +32,7 @@ func! CompileRunGcc()
 	elseif &filetype == 'javascript'
 		set splitbelow
 		:sp
-		:term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
+		:term node %
 	elseif &filetype == 'go'
 		set splitbelow
 		:sp

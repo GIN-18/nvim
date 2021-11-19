@@ -249,41 +249,6 @@ endsnippet
 
 ![fzf](./images/fzf.gif)
 
-### nerdtree(文件浏览)
-
----
-
-**插件地址**：[nerdtree](https://github.com/preservim/nerdtree)
-
-| 快捷键    | 描述           |
-|-----------|----------------|
-| `alt` `e` | 打开nerdtree   |
-| `q`       | 退出nerdtree   |
-| `?`       | 打开帮助文档   |
-| `o`       | 打开目录或文件 |
-| `I`       | 显示隐藏文件   |
-| `u`       | 返回上一级目录 |
-| `m`       | 打开菜单       |
-
-![nerdtree](./images/nerdtree.png)
-
-### vista(tags工具)
-
----
-
-**插件地址**：[vista.vim](https://github.com/liuchengxu/vista.vim)
-
-| 快捷键            | 描述          |
-|-------------------|---------------|
-| `alt` `v`         | 打开vista     |
-| `alt` `shift` `v` | 打开vista搜索 |
-| `q`               | 退出vista     |
-| `p`               | 预览          |
-
-![vista](./images/vista.png)
-
-![vista-finder](./images/vista-finder.png)
-
 ### dict(翻译)
 
 ---

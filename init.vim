@@ -121,9 +121,9 @@ noremap <Tab>h gT
 " 打开拼写检查
 noremap <LEADER>sc :set spell!<CR>
 " 上下分屏，并且光标在下屏幕
-noremap <LEADER><DOWN> :set splitbelow<CR>:split<CR>
+noremap <LEADER>j :set splitbelow<CR>:split<CR>
 " 左右分屏，并且光标在左屏幕
-noremap <LEADER><LEFT> :set nosplitright<CR>:vsplit<CR>
+noremap <LEADER>l :set nosplitright<CR>:vsplit<CR>
 " 改变分屏的大小
 noremap <S-UP> :res +5<CR>
 noremap <S-DOWN> :res -5<CR>
@@ -145,10 +145,6 @@ inoremap <C-]> <++>
 " vnoremap
 " -------------------------------------------------------------------
 vnoremap Y "+y
-
-" tnoremap
-" -------------------------------------------------------------------
-" tnoremap <M-q> <C-d>
 
 " -------------------------------------------------------------------
 "
@@ -194,32 +190,11 @@ Plug 'junegunn/fzf.vim'
 " md-img-paste
 Plug 'ferrine/md-img-paste.vim', { 'for': ['markdown', 'vim-plug'] }
 
-" nerdtree
-" Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-
 " vista
 " Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 
-" vim-startify
-" Plug 'mhinz/vim-startify'
-
-" indent-line
-" Plug 'glepnir/indent-guides.nvim'
-
-" calendar.vim
-" Plug 'itchyny/calendar.vim', { 'on': 'Calendar' }
-
-" leaderf
-" Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-
-" vim-terminal-help
-" Plug 'skywind3000/vim-terminal-help'
-
 " dashboard-nvim
 " Plug 'glepnir/dashboard-nvim'
-
-" vim-snippets代码片段库
-" Plug 'honza/vim-snippets'
 
 call plug#end()
 
