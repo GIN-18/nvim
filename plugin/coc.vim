@@ -4,6 +4,7 @@
 let g:coc_global_extensions = [
 		\ 'coc-git',
 		\ 'coc-html',
+    \ 'coc-sh',
 		\ 'coc-css',
 		\ 'coc-tsserver',
 		\ 'coc-vetur',
