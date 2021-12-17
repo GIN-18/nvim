@@ -13,9 +13,9 @@
 "
 " -------------------------------------------------------------------
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
+  !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
 endif
 
 " -------------------------------------------------------------------
@@ -24,14 +24,14 @@ endif
 "
 " -------------------------------------------------------------------
 " 打开高亮
-syntax on
+" syntax on
 " 不兼容vi
-set nocompatible
+" set nocompatible
 " 识别文件类型filetype
-filetype on
-filetype indent on
-filetype plugin on
-filetype plugin indent on
+" filetype on
+" filetype indent on
+" filetype plugin on
+" filetype plugin indent on
 " 设置tab键的缩进格数
 set tabstop=2
 set shiftwidth=2
@@ -76,11 +76,17 @@ colorscheme gin-colorscheme
 let &t_ut=''
 " 设置leader键为空格键
 let mapleader=" "
-" 设置不同模式下显示不同的光标样式
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-exec "nohlsearch"
+" 显示不可见字符
+set list
+set listchars=tab:\|\ ,trail:▫
+" 出错时，发出视觉提示，通常是屏幕闪烁。
+set visualbell
+" 命令模式下，在底部显示，当前键入的指令
+set showcmd
+" 打开文件监视。如果在编辑过程中文件发生外部改变(比如被别的编辑器编辑了)，就会发出提示
+set autoread
+" 不显示界面(乌干达)
+set shortmess=atI
 " 设置重新进入文件时，光标留在上次退出的地方
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " 退出插入模式时自动切换到英文
@@ -108,7 +114,6 @@ noremap <M-H> <C-w>h
 noremap <M-J> <C-w>j
 noremap <M-K> <C-w>k
 noremap <M-L> <C-w>l
-noremap <M-p> "+p
 noremap <M-t> :new<CR>:term<CR>i
 noremap <M-g> :new<CR>:term lazygit<CR>i
 noremap <LEADER>nh :nohlsearch<CR>
@@ -153,7 +158,7 @@ vnoremap Y "+y
 " -------------------------------------------------------------------
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
-autocmd FileType md source ~/.config/nvim/plugin/markdown-quick-input.vim
+autocmd FileType md source $HOME/.config/nvim/plugin/markdown-quick-input.vim
 
 " -------------------------------------------------------------------
 "
@@ -176,9 +181,6 @@ Plug 'kevinhwang91/rnvimr', { 'on': 'RnvimrToggle' }
 
 " translate
 Plug 'iamcco/dict.vim', { 'on': ['DictW', '<Plug>DictWSearch', '<Plug>DictWVSearch', '<Plug>DictRSearch', '<Plug>DictRVSearch']}
-                                                                                      
-" vim-devicons
-Plug 'ryanoasis/vim-devicons'
 
 " bracey.vim
 Plug 'turbio/bracey.vim', { 'do': 'npm install --prefix server', 'on': 'Bracey' }
@@ -190,11 +192,17 @@ Plug 'junegunn/fzf.vim'
 " md-img-paste
 Plug 'ferrine/md-img-paste.vim', { 'for': ['markdown', 'vim-plug'] }
 
+" nerdcommenter
+Plug 'preservim/nerdcommenter'
+
 " vista
 " Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 
 " dashboard-nvim
 " Plug 'glepnir/dashboard-nvim'
+
+" vim-devicons
+" Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -226,8 +234,8 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 noremap <LEADER>si :call <SID>SynStack()<CR>
 
 function! <SID>SynStack()
-	if !exists("*synstack")
-		return
-	endif
-	echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunction

@@ -2,18 +2,20 @@
 " -------------------------------------------------------------------
 " 自动加载coc插件
 let g:coc_global_extensions = [
-		\ 'coc-git',
-		\ 'coc-html',
+    \ 'coc-git',
+    \ 'coc-html',
     \ 'coc-sh',
-		\ 'coc-css',
-		\ 'coc-tsserver',
-		\ 'coc-vetur',
-		\ 'coc-json',
-		\ 'coc-emmet',
-		\ 'coc-eslint',
-		\ 'coc-snippets',
-		\ 'coc-highlight',
-		\ 'coc-prettier']
+    \ 'coc-css',
+    \ 'coc-tsserver',
+    \ 'coc-vetur',
+    \ 'coc-json',
+    \ 'coc-emmet',
+    \ 'coc-vimlsp',
+    \ 'coc-eslint',
+    \ 'coc-pyright',
+    \ 'coc-snippets',
+    \ 'coc-highlight',
+    \ 'coc-prettier']
 
 set updatetime=160
 set shortmess+=c
