@@ -195,6 +195,9 @@ Plug 'ferrine/md-img-paste.vim', { 'for': ['markdown', 'vim-plug'] }
 " nerdcommenter
 Plug 'preservim/nerdcommenter'
 
+" indent-blankline
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 " vista
 " Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 
