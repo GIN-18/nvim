@@ -64,3 +64,6 @@ nmap <silent> <LEADER>gr <Plug>(coc-diagnostic-prev)
 
 " Use <LEADER>k to show documentation in preview window.
 nnoremap <silent> <LEADER>k :call <SID>show_documentation()<CR>
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)

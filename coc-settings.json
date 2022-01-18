@@ -1,20 +1,23 @@
 {
-  "codeLens.enable": true,
-  "coc.preferences.extensionUpdateCheck": "daily",
-  "coc.preferences.formatOnSaveFiletypes": [
-    "html",
-    "css",
-    "javascript",
-    "python",
-    "json",
-    "yaml",
-    "vue"
-  ],
-  "git.addedSign.hlGroup": "GitGutterAdd",
-  "git.changedSign.hlGroup": "GitGutterChange",
-  "git.removedSign.hlGroup": "GitGutterDelete",
-  "git.topRemovedSign.hlGroup": "GitGutterDelete",
-  "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-  "vetur.ignoreProjectWarning": true,
-  "eslint.autoFixOnSave": true
+    "codeLens.enable": true,
+    "suggest.enablePreview": true,
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.formatOnSaveFiletypes": [
+        "html",
+        "css",
+        "javascript",
+        "shell",
+        "json",
+        "yaml",
+        "vue"
+    ],
+    "prettier.tabWidth": 4,
+    "prettier.disableSuccessMessage": true,
+    "git.addedSign.hlGroup": "GitGutterAdd",
+    "git.changedSign.hlGroup": "GitGutterChange",
+    "git.removedSign.hlGroup": "GitGutterDelete",
+    "git.topRemovedSign.hlGroup": "GitGutterDelete",
+    "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+    "vetur.ignoreProjectWarning": true,
+    "eslint.autoFixOnSave": true
 }

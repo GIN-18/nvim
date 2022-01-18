@@ -4,7 +4,8 @@
    * [1. 依赖](#1-依赖)
       * [npm安装neovim](#npm安装neovim)
       * [pip安装pynvim](#pip安装pynvim)
-   * [2. 快捷键](#2-快捷键)
+   * [2. 使用本配置](#2-使用本配置)
+   * [3. 快捷键](#3-快捷键)
    * [3. 前端开发](#3-前端开发)
       * [自动补全](#自动补全)
       * [颜色显示](#颜色显示)
@@ -17,8 +18,6 @@
       * [从剪贴板插入图片](#从剪贴板插入图片)
    * [5. 其他插件](#5-其他插件)
       * [fzf(模糊搜索)](#fzf模糊搜索)
-      * [nerdtree(文件浏览)](#nerdtree文件浏览)
-      * [vista(tags工具)](#vistatags工具)
       * [dict(翻译)](#dict翻译)
 
 ## 1. 依赖
@@ -41,19 +40,25 @@
 
 ### npm安装neovim
 
-```
+```sh
 sudo npm install -g neovim
 ```
 
 ### pip安装pynvim
 
-```
+```sh
 pip3 install --user pynvim
 
 pip install --user pynvim
 ```
 
-## 2. 快捷键
+## 2. 使用本配置
+
+```sh
+git clone https://github.com/GIN-18/nvim.git ~/.config/nvim
+```
+
+## 3. 快捷键
 
 `leader`键为`空格键`。
 
@@ -62,8 +67,8 @@ pip install --user pynvim
 | `s`               | 保存                           |
 | `shift` `s`       | 保存退出                       |
 | `shift` `q`       | 不保存退出                     |
-| `shift` `h`       | 光标移动到行首                   |
-| `shift` `l`       | 光标移动到行尾                   |
+| `shift` `h`       | 光标移动到行首                 |
+| `shift` `l`       | 光标移动到行尾                 |
 | `shift` `j`       | 光标向下移动5行                |
 | `shift` `k`       | 光标向上移动5行                |
 | `leader` `left`   | 左右分屏，光标在左分屏         |
@@ -81,7 +86,6 @@ pip install --user pynvim
 | `tab` `l`         | 切换到下一个标签               |
 | `alt` `t`         | 在底部打开一个终端             |
 | `Y`               | 在可视模式下，复制到系统剪贴板 |
-| `alt` `p`         | 从系统剪贴板粘贴               |
 | `leader` `n` `h`  | 取消搜索结果的高亮             |
 | `leader` `s` `c`  | 打开拼写检查                   |
 

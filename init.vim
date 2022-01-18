@@ -33,9 +33,9 @@ endif
 " filetype plugin on
 " filetype plugin indent on
 " 设置tab键的缩进格数
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 " 设置自动缩进
 set autoindent
 " 设置光标距离顶部和底部的固定位置
@@ -70,17 +70,15 @@ set splitbelow
 set termguicolors
 " 空格替换制表
 set expandtab
-" 设置颜色主题
-colorscheme gin-colorscheme
 " 解决不同终端下vim的配色问题
 let &t_ut=''
 " 设置leader键为空格键
 let mapleader=" "
+" 出错时，发出视觉提示，通常是屏幕闪烁。
+set visualbell
 " 显示不可见字符
 set list
 set listchars=tab:\|\ ,trail:▫
-" 出错时，发出视觉提示，通常是屏幕闪烁。
-set visualbell
 " 命令模式下，在底部显示，当前键入的指令
 set showcmd
 " 打开文件监视。如果在编辑过程中文件发生外部改变(比如被别的编辑器编辑了)，就会发出提示
@@ -93,6 +91,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 let s:fcitx_cmd = executable("fcitx5-remote") ? "fcitx5-remote" : "fcitx-remote"
 autocmd InsertLeave * let b:fcitx = system(s:fcitx_cmd) | call system(s:fcitx_cmd.' -c')
 autocmd InsertEnter * if exists('b:fcitx') && b:fcitx == 2 | call system(s:fcitx_cmd.' -o') | endif
+
+" 设置颜色主题
+colorscheme gin-colorscheme
 
 " -------------------------------------------------------------------
 "
@@ -198,6 +199,12 @@ Plug 'preservim/nerdcommenter'
 " indent-blankline
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+" nvim-treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" vim-suround
+Plug 'tpope/vim-surround'
+
 " vista
 " Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }
 
@@ -237,8 +244,8 @@ autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownCli
 noremap <LEADER>si :call <SID>SynStack()<CR>
 
 function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+    if !exists("*synstack")
+      return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunction
