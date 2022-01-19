@@ -13,9 +13,9 @@
 "
 " -------------------------------------------------------------------
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
+    !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
 endif
 
 " -------------------------------------------------------------------
@@ -60,8 +60,10 @@ set ignorecase
 set smartcase
 " 自动切换当前工作路径
 set autochdir
-" 将折叠方式设置为manual
-set foldmethod=manual
+" 将折叠方式设置为expr
+set foldlevel=99
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 " 光标所在的行高亮
 set cursorline
 " 窗口在下方打开
@@ -85,15 +87,17 @@ set showcmd
 set autoread
 " 不显示界面(乌干达)
 set shortmess=atI
+
+" 设置颜色主题
+colorscheme gin-colorscheme
+
 " 设置重新进入文件时，光标留在上次退出的地方
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 " 退出插入模式时自动切换到英文
 let s:fcitx_cmd = executable("fcitx5-remote") ? "fcitx5-remote" : "fcitx-remote"
 autocmd InsertLeave * let b:fcitx = system(s:fcitx_cmd) | call system(s:fcitx_cmd.' -c')
 autocmd InsertEnter * if exists('b:fcitx') && b:fcitx == 2 | call system(s:fcitx_cmd.' -o') | endif
-
-" 设置颜色主题
-colorscheme gin-colorscheme
 
 " -------------------------------------------------------------------
 "
@@ -147,6 +151,7 @@ inoremap [ []<Esc>i
 inoremap < <><Esc>i
 inoremap { {}<Esc>i
 inoremap <C-]> <++>
+inoremap <M-c> <C-r>=
 
 " vnoremap
 " -------------------------------------------------------------------

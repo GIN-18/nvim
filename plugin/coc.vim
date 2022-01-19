@@ -67,3 +67,6 @@ nnoremap <silent> <LEADER>k :call <SID>show_documentation()<CR>
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+" open yank list
+nnoremap <silent> <LEADER>y  :<C-u>CocList -A --normal yank<cr>
