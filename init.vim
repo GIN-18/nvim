@@ -75,7 +75,7 @@ set expandtab
 " 解决不同终端下vim的配色问题
 let &t_ut=''
 " 设置leader键为空格键
-let mapleader=" "
+let mapleader="\<SPACE>"
 " 出错时，发出视觉提示，通常是屏幕闪烁。
 set visualbell
 " 显示不可见字符
@@ -209,6 +209,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " vim-suround
 Plug 'tpope/vim-surround'
+
+" vimtex
+" Plug 'lervag/vimtex'
 
 " vista
 " Plug 'liuchengxu/vista.vim', { 'on': 'Vista!!' }

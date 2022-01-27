@@ -38,6 +38,14 @@
 11. xclip
 ```
 
+### Arch Linux使用pacman和yay安装依赖
+
+```sh
+sudo pacman -S nodejs npm yarn python3 python-pip fzf bat the_silver_searcher xclip ctags
+
+yay -S nerd-fonts-fira-code
+```
+
 ### npm安装neovim
 
 ```sh

@@ -13,6 +13,7 @@ let g:coc_global_extensions = [
     \ 'coc-vimlsp',
     \ 'coc-eslint',
     \ 'coc-pyright',
+    \ 'coc-clangd',
     \ 'coc-snippets',
     \ 'coc-highlight',
     \ 'coc-prettier']
