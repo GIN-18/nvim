@@ -205,7 +205,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 " nvim-treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " vim-suround
 Plug 'tpope/vim-surround'
@@ -223,37 +223,3 @@ Plug 'tpope/vim-surround'
 " Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
-
-" -------------------------------------------------------------------
-"
-" pluginSetting
-"
-" -------------------------------------------------------------------
-" bracey
-" -------------------------------------------------------------------
-let g:bracey_refresh_on_save = 1
-
-" rnvimr
-" -------------------------------------------------------------------
-nnoremap <silent> <M-r> :RnvimrToggle<CR>
-
-" Make Ranger to be hidden after picking a file
-let g:rnvimr_enable_picker = 1
-
-" md-img-paste
-" -------------------------------------------------------------------
-" let g:mdip_imgname = 'image'
-let g:mdip_imgdir = 'images'
-autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
-
-
-" 找到当前光标下的字符属于那个highlight-group
-" -------------------------------------------------------------------
-noremap <LEADER>si :call <SID>SynStack()<CR>
-
-function! <SID>SynStack()
-    if !exists("*synstack")
-      return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunction
