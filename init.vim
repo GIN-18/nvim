@@ -210,6 +210,9 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 " vim-suround
 Plug 'tpope/vim-surround'
 
+" terminal
+Plug 'voldikss/vim-floaterm'
+
 " vimtex
 " Plug 'lervag/vimtex'
 
