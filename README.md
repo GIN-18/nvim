@@ -105,13 +105,14 @@ git clone https://github.com/GIN-18/nvim.git ~/.config/nvim
 
 插件地址：[coc.nvim](https://github.com/neoclide/coc.nvim)
 
-| 键位             | 描述                       |
-|------------------|----------------------------|
-| `tab`            | 向下高亮补全项             |
-| `shift` `tab`    | 向上高亮补全项             |
-| `enter`          | 选择高亮的补全项           |
-| `leader` `g` `d` | 跳转到变量或函数定义的地方 |
-| `leader` `g` `r` | 跳转到代码错误的地方       |
+| 键位               | 描述                         |
+| ------------------ | ---------------------------- |
+| `ctrl` `j`         | 向下高亮补全项               |
+| `ctrl` `k`         | 向上高亮补全项               |
+| `enter`            | 选择高亮的补全项             |
+| `leader` `r` `n`   | 重命名变量                   |
+| `leader` `g` `d`   | 跳转到变量或函数定义的地方   |
+| `leader` `g` `r`   | 跳转到代码错误的地方         |
 
 在`plugin/coc.vim`文件中可以修改配置。
 
@@ -202,9 +203,9 @@ endsnippet
 
 插件地址：[markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 
-| 快捷键    | 描述     |
-|-----------|----------|
-| `shift` `r` | 打开预览 |
+| 快捷键      | 描述       |
+| ----------- | ---------- |
+| `shift` `r` | 打开预览   |
 
 配置中使用`chromium`浏览器作为预览工具。
 
@@ -274,3 +275,19 @@ endsnippet
 | `leader` `r` | 翻译并替换光标下的单词 |
 
 ![dict](./images/dict.gif)
+
+### vim-floaterm(终端)
+
+---
+
+**插件地址**[vim-floaterm](https://github.com/voldikss/vim-floaterm)
+
+
+| 快捷键           | 描述                         |
+|------------------|------------------------------|
+| `leader` `f` `t` | 普通模式下，打开终端         |
+| `leader` `f` `n` | 普通模式下，打开一个新终端   |
+| `leader` `f` `k` | 普通模式下，关闭所有终端     |
+| `ctrl` `z` `t`   | 终端模式下，隐藏终端         |
+| `ctrl` `z` `p`   | 终端模式下，切换到上一个终端 |
+| `ctrl` `z` `n`   | 终端模式下，切换到下一个终端 |
