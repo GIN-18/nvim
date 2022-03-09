@@ -280,7 +280,7 @@ endsnippet
 
 ---
 
-**插件地址**[vim-floaterm](https://github.com/voldikss/vim-floaterm)
+**插件地址**：[[vim-floaterm](https://github.com/voldikss/vim-floaterm)
 
 
 | 快捷键           | 描述                         |
@@ -288,6 +288,6 @@ endsnippet
 | `leader` `f` `t` | 普通模式下，打开终端         |
 | `leader` `f` `n` | 普通模式下，打开一个新终端   |
 | `leader` `f` `k` | 普通模式下，关闭所有终端     |
-| `ctrl` `z` `t`   | 终端模式下，隐藏终端         |
-| `ctrl` `z` `p`   | 终端模式下，切换到上一个终端 |
-| `ctrl` `z` `n`   | 终端模式下，切换到下一个终端 |
+| `alt` `t`        | 终端模式下，隐藏终端         |
+| `alt` `p`        | 终端模式下，切换到上一个终端 |
+| `alt` `n`        | 终端模式下，切换到下一个终端 |
