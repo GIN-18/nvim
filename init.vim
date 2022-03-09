@@ -119,7 +119,6 @@ noremap <M-H> <C-w>h
 noremap <M-J> <C-w>j
 noremap <M-K> <C-w>k
 noremap <M-L> <C-w>l
-noremap <M-t> :new<CR>:term<CR>i
 noremap <M-g> :new<CR>:term lazygit<CR>i
 noremap <LEADER>nh :nohlsearch<CR>
 " 打开一个新的标签页
