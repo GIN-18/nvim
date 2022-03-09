@@ -280,7 +280,7 @@ endsnippet
 
 ---
 
-**插件地址**：[[vim-floaterm](https://github.com/voldikss/vim-floaterm)
+**插件地址**：[vim-floaterm](https://github.com/voldikss/vim-floaterm)
 
 
 | 快捷键           | 描述                         |
