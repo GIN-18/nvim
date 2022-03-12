@@ -207,7 +207,7 @@ endsnippet
 | ----------- | ---------- |
 | `shift` `r` | 打开预览   |
 
-配置中使用`chromium`浏览器作为预览工具。
+配置中使用`microsoft-edge-beta`浏览器作为预览工具。
 
 在`plugin/markdown-preview.vim`文件中可以修改配置。
 
