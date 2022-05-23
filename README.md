@@ -278,7 +278,7 @@ endsnippet
 
 ### vim-floaterm(终端)
 
-<hr style="height:1px">
+<hr style="height:0.5px">
 
 **插件地址**：[vim-floaterm](https://github.com/voldikss/vim-floaterm)
 
