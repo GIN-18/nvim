@@ -101,7 +101,7 @@ git clone https://github.com/GIN-18/nvim.git ~/.config/nvim
 
 ### 自动补全
 
----
+<hr style="height:1px">
 
 插件地址：[coc.nvim](https://github.com/neoclide/coc.nvim)
 
@@ -120,7 +120,7 @@ git clone https://github.com/GIN-18/nvim.git ~/.config/nvim
 
 ### 颜色显示
 
----
+<hr style="height:1px">
 
 插件地址：[coc-highlight](https://github.com/neoclide/coc-highlight)
 
@@ -130,7 +130,7 @@ git clone https://github.com/GIN-18/nvim.git ~/.config/nvim
 
 ### 代码片段
 
----
+<hr style="height:1px">
 
 插件地址：[coc-sinppets](https://github.com/neoclide/coc-snippets)
 
@@ -156,7 +156,7 @@ endsnippet
 
 ### 自动刷新页面
 
----
+<hr style="height:1px">
 
 插件地址：[bracey.vim](https://github.com/turbio/bracey.vim)
 
@@ -170,7 +170,7 @@ endsnippet
 
 ### 快速输入
 
----
+<hr style="height:1px">
 
 在`插入模式(insert-mode)`下，markdown输入快捷键。
 
@@ -199,7 +199,7 @@ endsnippet
 
 ### markdown预览
 
----
+<hr style="height:1px">
 
 插件地址：[markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 
@@ -215,7 +215,7 @@ endsnippet
 
 ### 表格模板
 
----
+<hr style="height:1px">
 
 插件地址：[vim-table-mode](https://github.com/dhruvasagar/vim-table-mode)
 
@@ -232,7 +232,7 @@ endsnippet
 
 ### 从剪贴板插入图片
 
----
+<hr style="height:1px">
 
 插件地址：[md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim)
 
@@ -248,7 +248,7 @@ endsnippet
 
 ### fzf(模糊搜索)
 
----
+<hr style="height:1px">
 
 **插件地址**：[fzf.vim](https://github.com/junegunn/fzf.vim)
 
@@ -264,7 +264,7 @@ endsnippet
 
 ### dict(翻译)
 
----
+<hr style="height:1px">
 
 **插件地址**：[dict.vim](https://github.com/iamcco/dict.vim)
 
@@ -278,7 +278,7 @@ endsnippet
 
 ### vim-floaterm(终端)
 
----
+<hr style="height:1px">
 
 **插件地址**：[vim-floaterm](https://github.com/voldikss/vim-floaterm)
 
