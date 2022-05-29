@@ -89,7 +89,7 @@ set autoread
 set shortmess=atI
 
 " 设置颜色主题
-colorscheme gin-colorscheme
+colorscheme nord
 
 " 设置重新进入文件时，光标留在上次退出的地方
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

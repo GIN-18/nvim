@@ -13,15 +13,15 @@ set statusline+=%=%7*\ %m%r%y\ %*
 set statusline+=%8*\ %{&ff}\ \|\ %{\"\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"\ \|\"}\ %-14.(row:%l/%L,col:%c%V%)\ %*
 set statusline+=%9*\ %P\ %*
 
-hi User1 gui=bold guifg=#080808 guibg=#b0dbd4
-hi User2 gui=bold guifg=#afd0a5 guibg=#626262
-hi User3 gui=bold guifg=#d7ffaf guibg=#4e4e4e
-hi User4 gui=bold guifg=#afafff guibg=#3a3a3a
-hi User5 gui=bold guifg=#c6c6c6 guibg=#444444
-hi User6 gui=bold guifg=#afd7ff guibg=#303030
-hi User7 gui=bold guifg=#949494 guibg=#3a3a3a
-hi User8 gui=bold guifg=#bcbcbc guibg=#444444
-hi User9 gui=bold guifg=#b2b2b2 guibg=#585858
+hi User1 gui=bold guifg=#3b4252 guibg=#88c0d0
+hi User2 gui=bold guifg=#3b4252 guibg=#8fbcbb
+hi User3 gui=bold guifg=#a3be8c guibg=#3b4252
+hi User4 gui=bold guifg=#b0c4de guibg=#434c5e
+hi User5 gui=bold guifg=#c6c6c6 guibg=#4c566a
+hi User6 gui=bold guifg=#afd7ff guibg=#3b4252
+hi User7 gui=bold guifg=#add8e6 guibg=#4c566a
+hi User8 gui=bold guifg=#bcbcbc guibg=#434c5e
+hi User9 gui=bold guifg=#e6e6fa guibg=#4c566a
 
 function! Buf_total_num()
     return len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
