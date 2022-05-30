@@ -21,5 +21,6 @@
     "git.topRemovedSign.hlGroup": "GitGutterDelete",
     "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
     "vetur.ignoreProjectWarning": true,
+    "colors.filetypes": ["*"],
     "eslint.autoFixOnSave": true
 }

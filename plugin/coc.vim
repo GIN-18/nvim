@@ -71,3 +71,6 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " open yank list
 nnoremap <silent> <LEADER>y  :<C-u>CocList -A --normal yank<cr>
+
+" highlight
+autocmd CursorHold * silent call CocActionAsync('highlight')
