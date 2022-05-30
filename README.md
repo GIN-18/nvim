@@ -102,7 +102,7 @@ git clone https://github.com/GIN-18/nvim.git ~/.config/nvim
 
 ### 自动补全
 
-<hr style="height:1px">
+---
 
 插件地址：[coc.nvim](https://github.com/neoclide/coc.nvim)
 
