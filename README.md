@@ -19,6 +19,7 @@
    * [5. 其他插件](#5-其他插件)
       * [fzf(模糊搜索)](#fzf模糊搜索)
       * [dict(翻译)](#dict翻译)
+      * [floaterm(终端)](#floaterm终端)
 
 ## 1. 依赖
 
@@ -101,7 +102,7 @@ git clone https://github.com/GIN-18/nvim.git ~/.config/nvim
 
 ### 自动补全
 
----
+<hr style="height:1px">
 
 插件地址：[coc.nvim](https://github.com/neoclide/coc.nvim)
 
