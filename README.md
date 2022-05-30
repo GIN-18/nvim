@@ -2,6 +2,7 @@
 
 * [neovim配置 (前端开发 + markdown编辑)](#neovim配置-前端开发--markdown编辑)
    * [1. 依赖](#1-依赖)
+      * [Arch Linux使用pacman和yay安装依赖](#arch-linux使用pacman和yay安装依赖)
       * [npm安装neovim](#npm安装neovim)
       * [pip安装pynvim](#pip安装pynvim)
    * [2. 使用本配置](#2-使用本配置)
@@ -19,7 +20,7 @@
    * [5. 其他插件](#5-其他插件)
       * [fzf(模糊搜索)](#fzf模糊搜索)
       * [dict(翻译)](#dict翻译)
-      * [floaterm(终端)](#floaterm终端)
+      * [vim-floaterm(终端)](#vim-floaterm终端)
 
 ## 1. 依赖
 
