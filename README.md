@@ -293,3 +293,5 @@ endsnippet
 | `alt` `t`        | 终端模式下，隐藏终端         |
 | `alt` `p`        | 终端模式下，切换到上一个终端 |
 | `alt` `n`        | 终端模式下，切换到下一个终端 |
+
+![floaterm](./images/floaterm.gif)
