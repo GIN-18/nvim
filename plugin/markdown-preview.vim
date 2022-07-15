@@ -8,3 +8,7 @@ let g:mkdp_auto_start = 0
 let g:mkdp_refresh_slow = 1
 " 设置的预览浏览器
 let g:mkdp_browser = 'microsoft-edge-beta'
+" 设置预览的样式
+let g:mkdp_markdown_css = '~/.config/nvim/static/markdown.css'
+" 设置高亮的样式
+let g:mkdp_highlight_css = '~/.config/nvim/static/highlight.css'
