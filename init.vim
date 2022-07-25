@@ -178,13 +178,13 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install', 'for': ['
 " markdown表格模板插件
 Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['markdown', 'vim-plug'] }
 
-" coc.nvim
+" 自动补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" rnvimr
+" 资源管理
 Plug 'kevinhwang91/rnvimr', { 'on': 'RnvimrToggle' }
 
-" translate
+" 翻译
 Plug 'iamcco/dict.vim', { 'on': ['DictW', '<Plug>DictWSearch', '<Plug>DictWVSearch', '<Plug>DictRSearch', '<Plug>DictRVSearch']}
 
 " bracey.vim
@@ -197,10 +197,10 @@ Plug 'junegunn/fzf.vim'
 " md-img-paste
 Plug 'ferrine/md-img-paste.vim', { 'for': ['markdown', 'vim-plug'] }
 
-" nerdcommenter
+" 注释
 Plug 'preservim/nerdcommenter'
 
-" indent-blankline
+" 缩进线
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 " nvim-treesitter
@@ -209,7 +209,7 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 " vim-suround
 Plug 'tpope/vim-surround'
 
-" terminal
+" 终端
 Plug 'voldikss/vim-floaterm'
 
 " vimtex
