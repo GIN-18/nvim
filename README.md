@@ -213,12 +213,6 @@ endsnippet
 
 在`plugin/markdown-preview.vim`文件中可以修改配置。
 
-将源码`~/.config/nvim/plugged/markdown-preview.nvim/app/_static/page.css`中的`--secondary-background-color`修改为以下值：
-
-```css
---secondary-background-color: #2e3440
-```
-
 ![markdown-preview](./images/markdown-preview.gif)
 
 ### 表格模板

@@ -30,14 +30,15 @@
     --color-bg-primary: #3b4252;
     --color-bg-secondary: #3b4252;
     --color-bg-tertiary: #434c5e;
-    --color-border-primary: #d8dee9;
+    --color-border-primary: #4c566a;
     --color-border-secondary: #21262d;
     --color-border-tertiary: #6e7681;
     --color-kbd-foreground: #b1bac4;
     --color-markdown-blockquote-border: #3b434b;
     --color-markdown-table-border: #d8dee9;
     --color-markdown-table-tr-border: #d8dee9;
-    --color-markdown-code-bg: #f0f6fc26;
+    --color-markdown-code-bg: #4c566a;
+    --secondary-background-color: #2e3440;
 }
 
 .markdown-body ol ol,
